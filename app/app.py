@@ -272,14 +272,8 @@ if st.button("Run robustness test"):
                 hybrid_false_alarms += 1
 
     # Display results
-    st.write("### Accuracy Comparison")
+    st.write("### Model Accuracy")
     st.write(f"Mission-aware ML accuracy: {mission_correct / n_test:.2f}")
     st.write(f"Naive ML accuracy: {naive_correct / n_test:.2f}")
     st.write(f"Classical accuracy: {classical_correct / n_test:.2f}")
     st.write(f"Hybrid accuracy: {hybrid_correct / n_test:.2f}")
-
-    st.write("### False Alarm Rates (non-signal inputs)")
-    st.write(f"Mission-aware ML false alarm rate: {mission_false_alarms / n_test:.2f}")
-    st.write(f"Naive ML false alarm rate: {naive_false_alarms / n_test:.2f}")
-    st.write(f"Classical false alarm rate: {classical_false_alarms / n_test:.2f}")
-    st.write(f"Hybrid false alarm rate: {hybrid_false_alarms / n_test:.2f}")
